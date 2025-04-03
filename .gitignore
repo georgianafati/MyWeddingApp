@@ -18,3 +18,6 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+.env
+.env.backup
+.env.production
