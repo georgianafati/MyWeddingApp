@@ -56,9 +56,6 @@ class User extends Authenticatable
 
     public function canAccessPanel(Panel $panel): bool
     {
-        if ($panel->getId() === 'admin') {
-        return str_ends_with($this->email, '@gmail.com') && $this->hasVerifiedEmail();
-        }
         return true;
     }
 }
