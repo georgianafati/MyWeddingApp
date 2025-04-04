@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
 
 class Event extends Model
 {
@@ -41,5 +43,10 @@ class Event extends Model
     public function getTotalInvitationsAttribute()
     {
         return $this->eventParticipants->count();
+    }
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return true;
     }
 }
