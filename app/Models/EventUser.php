@@ -3,8 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Filament\Models\Contracts\FilamentUser;
-use Filament\Panel;
 
 class EventUser extends Model
 {
@@ -18,10 +16,5 @@ class EventUser extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function canAccessPanel(Panel $panel): bool
-    {
-        return true;
     }
 }
