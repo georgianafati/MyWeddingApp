@@ -49,7 +49,7 @@ class BucketListsRelationManager extends RelationManager
                 ->sortable()
                 ->searchable(),
                 Tables\Columns\TextColumn::make('price')
-                    ->money('RON', true)
+                    ->money('EUR', true)
                     ->sortable()
                     ->searchable()
             ])

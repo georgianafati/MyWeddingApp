@@ -19,34 +19,73 @@
             </style>
         @endif
     </head>
-    <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-        <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 not-has-[nav]:hidden">
-                <nav class="flex items-center justify-end gap-4">
+    <body class="bg-pink-200 text-gray-900 flex items-center lg:justify-center min-h-screen flex-col ">
+        <div class=" flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
+            <main class=" flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
+                <nav class=" top-0 flex items-center justify-end gap-4 fixed z-1000 bg-white w-full px-4 py-2 lg:max-w-4xl max-w-[335px] rounded-t-md">
                     @auth
                         <a
                             href="{{ url('/dashboard') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal"
+                            class="inline-block px-5 py-1.5 border-[#19140035] hover:border-[#1915014a] border dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal hover:bg-gray-100 bg-opacity-10"
                         >
                             Dashboard
                         </a>
                     @else
                         <a
                             href="/dashboard/login"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
+                            class="inline-block px-5 py-1.5 border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal hover:bg-gray-100 bg-opacity-90 dark:bg-opacity-90"
                         >
-                            Log in
+                            <b>Log in</b>
                         </a>
                             <a
                                 href="/dashboard/register"
-                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
+                                class="hover:bg-gray-100 bg-opacity-10 inline-block px-5 py-1.5 border-[#19140035] hover:border-[#1915014a] border dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
                                 Register
                             </a>
                     @endauth
                 </nav>
-        </header>
-        <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
-            <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
-                <p>Hi there!</p>
+                <section class="bg-white rounded-b-md pt-12 pb-4">
+                    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                        <div class="max-w-2xl mx-auto text-center">
+                            <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Welcome to your Wedding Dashboard! &#128140;</h2>
+                            <p class="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600">„De la Save the Date la petrecere: totul sub control, pentru tine și invitații tăi.”</p>
+                        </div>
+                
+                        <div class="relative mt-12 lg:mt-20">
+                            <div class="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28">
+                                <img class="w-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg" alt="" />
+                            </div>
+                
+                            <div class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
+                                <div>
+                                    <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                                        <span class="text-xl font-semibold text-gray-700"> 1 </span>
+                                    </div>
+                                    <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Creează-ți nunta sau Participă la una</h3>
+                                    <p class="mt-4 text-base text-gray-600">Înregistrează-te în aplicație și creează-ți propria nuntă alături de invitații tăi <b>sau</b> vizualizează nunțile la care ești invitat.</p>
+                                </div>
+                
+                                <div>
+                                    <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                                        <span class="text-xl font-semibold text-gray-700"> 2 </span>
+                                    </div>
+                                    <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Adaugă detalii și programe</h3>
+                                    <p class="mt-4 text-base text-gray-600">Configurează tematica, dress code-ul și programul zilei (cununie, petrecere, brunch etc.), încarcă harta locației și atașează fotografii sau documente utile invitaților.</p>
+                                </div>
+                
+                                <div>
+                                    <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                                        <span class="text-xl font-semibold text-gray-700"> 3 </span>
+                                    </div>
+                                    <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Invită și urmărește răspunsurile</h3>
+                                    <p class="mt-4 text-base text-gray-600">Trimite invitații direct din dashboard prin codul QR generat, pentru a împărtăși detaliile invitaților și a monitoriza cheltuielile nunții, numărul persoanelor invitate și multe altele.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                  
             </main>
         </div>
 

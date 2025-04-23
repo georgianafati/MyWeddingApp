@@ -52,7 +52,7 @@ class EventParticipantResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('Total Bucket Lists Price')
                     ->label('Total Bucket Lists Price')
-                    ->money('RON', true)
+                    ->money('EUR', true)
                     ->sortable()
                     ->searchable()
                     ->getStateUsing(fn (Event $record) => $record->getTotalBucketListsPriceAttribute()),

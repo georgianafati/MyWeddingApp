@@ -43,6 +43,11 @@ class ViewEventParticipant extends ViewRecord
                 TextEntry::make('music')
                     ->label('Event Music')
                     ->html(),
-            ]);
+            ])->columns([
+                'sm' => 1,
+                'lg' => 1,
+            ])->extraAttributes([
+                'class' => 'divide-y',  
+            ]); 
     }
 }

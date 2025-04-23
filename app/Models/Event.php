@@ -8,6 +8,14 @@ class Event extends Model
 {
     protected $guarded = [];
 
+    protected $casts = [
+        'start_time'     => 'datetime',
+        'description'    => 'string',
+        'menu'           => 'array',
+        'music'          => 'array',
+        'location_image' => 'array',
+    ];
+
     public function transactions()
     {
         return $this->hasMany(EventTransaction::class);
