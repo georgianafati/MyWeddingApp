@@ -126,7 +126,7 @@ class EventResource extends Resource
                             ]);
                         }),
                 ]),
-                
+
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -143,6 +143,9 @@ class EventResource extends Resource
             ]),
             RelationGroup::make('Invitations', [
                 RelationManagers\UsersRelationManager::class,
+            ]),
+            RelationGroup::make('Gifts', [
+                RelationManagers\TransactionsRelationManager::class,
             ]),
         ];
     }

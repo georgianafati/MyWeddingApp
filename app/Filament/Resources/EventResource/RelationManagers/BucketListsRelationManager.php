@@ -36,7 +36,7 @@ class BucketListsRelationManager extends RelationManager
                     ->image()
                     ->columnSpanFull()
                     ->multiple(),
-                
+
             ]);
     }
 
@@ -46,8 +46,8 @@ class BucketListsRelationManager extends RelationManager
             ->recordTitleAttribute('name')
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                ->sortable()
-                ->searchable(),
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('price')
                     ->money('EUR', true)
                     ->sortable()
